@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app {
+  height: 100dvh;
+  width: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  height: 32rem;
+  width: 30rem;
+  outline: black solid 3px;
+}
+
+.image {
+  height: 40%;
+  width: 100%;
+  background-color: blue;
+  outline: none;
+  object-fit: cover;
+}
+
+.headerText {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.text {
+  padding: 1rem;
+}

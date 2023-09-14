@@ -1,0 +1,38 @@
+.foodItemContainer {
+  display: flex;
+  flex-direction: column;
+  width: 35rem;
+  margin: 2rem;
+}
+
+.foodName {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.ingredients {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.priceSoldOut {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: rgba(55, 55, 55, 0.5);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 50%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.3rem;
+}
