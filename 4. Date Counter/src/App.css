@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.app {
+  background-color: #494d5f;
+  height: 100dvh;
+}
+
+.btn {
+  height: 50px;
+  width: 50px;
+  font-size: 28px;
+}
+
+.Container {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 3rem;
+}
