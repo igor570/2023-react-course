@@ -1,4 +1,5 @@
-import React from 'react'
+import { useState } from 'react'
+import './FlashCards.scss'
 
 interface FlashCardProps {
   id?: number
@@ -7,10 +8,16 @@ interface FlashCardProps {
 }
 
 const FlashCards = ({ id, question, answer }: FlashCardProps) => {
-  //TODO: Manage state in this component to render either question or answer depending on click (swapping boolean)
+  const [isClicked, setIsClicked] = useState(false)
+
+  const setClick = () => {
+    //Swapping booleans!
+    isClicked ? setIsClicked(false) : setIsClicked(true)
+  }
+
   return (
-    <div key={id}>
-      {question} {answer}
+    <div onClick={setClick} key={id} className='flashCard'>
+      {!isClicked ? question : <strong>{answer}</strong>}
     </div>
   )
 }

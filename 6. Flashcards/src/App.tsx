@@ -1,4 +1,4 @@
-import './App.css'
+import './App.scss'
 import FlashCards from './components/FlashCards/FlashCards'
 
 function App() {
@@ -39,13 +39,15 @@ function App() {
 
   return (
     <>
-      {questions.map((question) => (
-        <FlashCards
-          key={question.id}
-          question={question.question}
-          answer={question.answer}
-        />
-      ))}
+      <div className='flashCardContainer'>
+        {questions.map((question) => (
+          <FlashCards
+            key={question.id}
+            question={question.question}
+            answer={question.answer}
+          />
+        ))}
+      </div>
     </>
   )
 }
