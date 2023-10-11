@@ -1,16 +1,23 @@
-import { useState } from 'react'
+import { useState, FormEventHandler } from 'react'
 
-const Form = () => {
+const Form = ({ onAddItems } : any) => {
   const [description, setDescription] = useState<string>('')
   const [quantity, setQuantity] = useState<number>(1)
+  
 
-  const handleSubmit = (e: any) => {
-    e.preventDefault()
+
+
+  const handleSubmit : FormEventHandler<HTMLFormElement> = (event) => {
+    event.preventDefault()
 
     if (!description) return //Guard clause
+
     const newItem = { id: Date.now(), description, quantity, packed: false } //Storing the data from the form!
+    onAddItems(newItem)
     setDescription('')
     setQuantity(1)
+
+
   }
 
   return (

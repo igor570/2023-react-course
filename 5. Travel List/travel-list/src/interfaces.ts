@@ -8,3 +8,7 @@ export interface Item {
 export interface PackingListProp {
   items: Item[]
 }
+
+export interface FormProp {
+  items: Item[]
+}
