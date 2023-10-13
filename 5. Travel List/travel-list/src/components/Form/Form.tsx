@@ -4,9 +4,6 @@ const Form = ({ onAddItems } : any) => {
   const [description, setDescription] = useState<string>('')
   const [quantity, setQuantity] = useState<number>(1)
   
-
-
-
   const handleSubmit : FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault()
 
@@ -16,8 +13,6 @@ const Form = ({ onAddItems } : any) => {
     onAddItems(newItem)
     setDescription('')
     setQuantity(1)
-
-
   }
 
   return (

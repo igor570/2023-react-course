@@ -1,3 +1,5 @@
+//Interfaces have a different syntax to objects
+//While it is the blueprint of an object, an interface is not an object.
 export interface Item {
   id: number
   description: string
@@ -6,8 +8,12 @@ export interface Item {
 }
 
 export interface PackingListProp {
-  items: Item[]
+  items: Item[],
+  //Interface[' '] is dynamic
+  // Function Contract
+  onRemoveItem: (id: Item['id']) => void;
 }
+
 
 export interface FormProp {
   items: Item[]
