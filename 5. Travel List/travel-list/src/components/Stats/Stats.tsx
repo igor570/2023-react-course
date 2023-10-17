@@ -1,11 +1,11 @@
 import { useMemo } from "react";
 import { StatsProp } from "../../interfaces";
 
-const Stats = ({ items }: StatsProp) => {
+const Stats = ({ items } : StatsProp) => {
   //useMemo Happens after the Render. 
   //Stored in RAM and should be used only for expensive calculations
   //It will not render again if the value has not changed
-  const packagedItems = useMemo(()=> {
+  const packagedItems = useMemo(() => {
     //Guard clause
     if (items.length === 0) {
       return String(0);
