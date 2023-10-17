@@ -11,10 +11,20 @@ export interface PackingListProp {
   items: Item[],
   //Interface[' '] is dynamic
   // Function Contract
-  onRemoveItem: (id: Item['id']) => void;
+  onRemoveItem: (id: Item['id']) => void,
+  onToggleItems: (id: Item['id']) => void;
 }
 
 
 export interface FormProp {
+  items: Item[]
+}
+
+export interface ToggleItemProp {
+  items: Item[]
+
+}
+
+export interface StatsProp {
   items: Item[]
 }

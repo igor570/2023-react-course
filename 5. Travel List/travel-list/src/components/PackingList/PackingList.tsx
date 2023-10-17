@@ -1,7 +1,7 @@
 import Item from '../Item/Item'
 import { PackingListProp } from '../../interfaces'
 
-const PackingList = ({ items, onRemoveItem }: PackingListProp) => {
+const PackingList = ({ items, onRemoveItem, onToggleItems }: PackingListProp) => {
   return (
     <ul className='list'>
       {items.map((item) => (
@@ -13,6 +13,7 @@ const PackingList = ({ items, onRemoveItem }: PackingListProp) => {
           quantity={item.quantity}
           packed={item.packed}
           onRemoveItem={onRemoveItem}
+          onToggleItems={onToggleItems}
         />
       ))}
     </ul>
